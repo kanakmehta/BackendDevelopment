@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1 - HTML5 Elements</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f4f4f4;
+        }
+
+        header,
+        nav,
+        section,
+        article,
+        aside,
+        footer {
+            background: white;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        img {
+            border-radius: 10px;
+        }
+
+        fieldset {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Experiment 1: HTML5 Elements</h1>
+        <p>This page demonstrates most HTML5 elements.</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">About</a> |
+        <a href="#">Contact</a>
+    </nav>
+
+    <section>
+
+        <h2>Text Formatting</h2>
+
+        <p>This is a <b>Bold</b>, <strong>Strong</strong>, <i>Italic</i>,
+            <em>Emphasized</em>, <u>Underline</u>,
+            <mark>Highlighted</mark>,
+            <small>Small</small>,
+            H<sub>2</sub>O,
+            x<sup>2</sup>,
+            <del>Deleted</del>,
+            <ins>Inserted</ins>.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Image</h2>
+
+        <img src="https://via.placeholder.com/250" alt="Sample Image">
+
+    </section>
+
+    <section>
+
+        <h2>Lists</h2>
+
+        <h3>Ordered List</h3>
+
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+
+        <h3>Unordered List</h3>
+
+        <ul>
+            <li>Apple</li>
+            <li>Mango</li>
+            <li>Banana</li>
+        </ul>
+
+        <h3>Description List</h3>
+
+        <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language</dd>
+
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+        </dl>
+
+    </section>
+
+    <section>
+
+        <h2>Table</h2>
+
+        <table>
+
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Semester</th>
+            </tr>
+
+            <tr>
+                <td>Kanak</td>
+                <td>B.Tech CSE</td>
+                <td>5th</td>
+            </tr>
+
+            <tr>
+                <td>Rahul</td>
+                <td>BCA</td>
+                <td>3rd</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section>
+
+        <h2>HTML5 Form</h2>
+
+        <form>
+
+            <fieldset>
+
+                <legend>Registration Form</legend>
+
+                Name:
+                <input type="text"><br><br>
+
+                Password:
+                <input type="password"><br><br>
+
+                Email:
+                <input type="email"><br><br>
+
+                Phone:
+                <input type="tel"><br><br>
+
+                Number:
+                <input type="number"><br><br>
+
+                Date:
+                <input type="date"><br><br>
+
+                Time:
+                <input type="time"><br><br>
+
+                Month:
+                <input type="month"><br><br>
+
+                Week:
+                <input type="week"><br><br>
+
+                Color:
+                <input type="color"><br><br>
+
+                Range:
+                <input type="range"><br><br>
+
+                Search:
+                <input type="search"><br><br>
+
+                URL:
+                <input type="url"><br><br>
+
+                File:
+                <input type="file"><br><br>
+
+                Gender:
+                <input type="radio" name="g"> Male
+                <input type="radio" name="g"> Female
+                <br><br>
+
+                Skills:
+                <input type="checkbox"> HTML
+                <input type="checkbox"> CSS
+                <input type="checkbox"> JS
+                <br><br>
+
+                City:
+
+                <select>
+                    <option>Delhi</option>
+                    <option>Mumbai</option>
+                    <option>Dehradun</option>
+                </select>
+
+                <br><br>
+
+                Message:
+
+                <textarea rows="4" cols="30"></textarea>
+
+                <br><br>
+
+                <input type="submit">
+                <input type="reset">
+
+            </fieldset>
+
+        </form>
+
+    </section>
+
+    <section>
+
+        <h2>Audio</h2>
+
+        <audio controls>
+            <source src="sample.mp3" type="audio/mpeg">
+        </audio>
+
+    </section>
+
+    <section>
+
+        <h2>Video</h2>
+
+        <video width="300" controls>
+            <source src="sample.mp4" type="video/mp4">
+        </video>
+
+    </section>
+
+    <section>
+
+        <h2>Progress Bar</h2>
+
+        <progress value="70" max="100"></progress>
+
+        <h2>Meter</h2>
+
+        <meter value="0.8">80%</meter>
+
+    </section>
+
+    <section>
+
+        <h2>Details & Summary</h2>
+
+        <details>
+
+            <summary>Click Here</summary>
+
+            <p>This is HTML5 Details Tag.</p>
+
+        </details>
+
+    </section>
+
+    <section>
+
+        <h2>Canvas</h2>
+
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid black;">
+        </canvas>
+
+    </section>
+
+    <section>
+
+        <h2>SVG</h2>
+
+        <svg width="150" height="120">
+            <circle cx="60" cy="60" r="50" fill="red"></circle>
+        </svg>
+
+    </section>
+
+    <section>
+
+        <h2>Iframe</h2>
+
+        <iframe src="https://example.com" width="400" height="200"></iframe>
+
+    </section>
+
+    <aside>
+        <h3>Aside Section</h3>
+        <p>This is additional information.</p>
+    </aside>
+
+    <marquee>Welcome to HTML5 Experiment</marquee>
+
+    <footer>
+
+        <p>&copy; 2026 HTML5 Lab Experiment</p>
+
+    </footer>
+
+    <script>
+
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(20, 20, 100, 50);
+
+    </script>
+
+</body>
+
+</html>
