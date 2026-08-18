@@ -1,5 +1,7 @@
 # Installed npm packages
-node_modules/
+node_modules
+node_modules/**
+*/node_modules/**
 
 # Environment variables and secrets
 .env
