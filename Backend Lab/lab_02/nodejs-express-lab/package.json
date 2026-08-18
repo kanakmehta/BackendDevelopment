@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-express-lab",
+  "version": "1.0.0",
+  "description": "Node.js and Express Lab",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express"
+  ],
+  "author": "Kanak",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
