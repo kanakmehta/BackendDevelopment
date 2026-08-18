@@ -1,0 +1,30 @@
+# Installed npm packages
+node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Keep an example environment file if created
+!.env.example
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Nodemon temporary files
+.nodemon*
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Build and coverage output
+dist/
+build/
+coverage/
