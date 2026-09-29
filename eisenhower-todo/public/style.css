@@ -1,0 +1,782 @@
+/* =========================================================
+   EISENHOWER TODO — AESTHETIC GEN-Z PRODUCTIVITY UI
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink: #172033;
+  --muted: #687386;
+  --soft-muted: #8c96a6;
+  --white: #ffffff;
+  --page: #fdfcf9;
+
+  --do-bg: #fff1f2;
+  --do-accent: #ef777b;
+
+  --schedule-bg: #effaf4;
+  --schedule-accent: #70bd91;
+
+  --delegate-bg: #fff8e8;
+  --delegate-accent: #e4ad42;
+
+  --eliminate-bg: #f3f5f8;
+  --eliminate-accent: #9da5b2;
+
+  --border: rgba(30, 41, 59, 0.08);
+
+  --shadow:
+    0 12px 35px rgba(31, 41, 55, 0.055);
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+  min-height: 100vh;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #172033;
+
+  background:
+    radial-gradient(
+      circle at 8% 18%,
+      rgba(255, 220, 220, 0.28),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 92% 45%,
+      rgba(220, 242, 229, 0.30),
+      transparent 25%
+    ),
+    #fdfcf9;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+  height: 66px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 42px;
+
+  background: rgba(255, 254, 251, 0.94);
+
+  border-bottom: 1px solid rgba(23, 32, 51, 0.07);
+
+  position: relative;
+  z-index: 10;
+
+  backdrop-filter: blur(14px);
+}
+
+header h1 {
+  font-size: 20px;
+  line-height: 1;
+
+  font-weight: 750;
+
+  letter-spacing: -0.65px;
+
+  color: #172033;
+}
+
+
+/* =========================================================
+   ADD TASK BUTTON
+   ========================================================= */
+
+.add-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 40px;
+
+  padding: 0 18px;
+
+  background: #172033;
+
+  color: #ffffff;
+
+  border-radius: 11px;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1px;
+
+  box-shadow:
+    0 6px 15px rgba(23, 32, 51, 0.13);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.add-btn:hover {
+  background: #252f44;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 9px 20px rgba(23, 32, 51, 0.18);
+}
+
+
+/* =========================================================
+   INTRO SECTION
+   ========================================================= */
+
+.intro {
+  width: min(1380px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  padding: 30px 0 14px;
+
+  position: relative;
+}
+
+.intro h2 {
+  font-size: 28px;
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  color: #172033;
+}
+
+.intro p {
+  margin-top: 7px;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  color: #6f7b8e;
+
+  letter-spacing: 0.05px;
+}
+
+
+/* Small decorative label */
+.intro::before {
+  content: "STAY PRODUCTIVE";
+
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+
+  color: #9aa3b2;
+}
+
+
+/* =========================================================
+   MATRIX
+   ========================================================= */
+
+.matrix {
+  width: min(1380px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  padding: 16px 0 35px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   QUADRANTS
+   ========================================================= */
+
+.quadrant {
+  position: relative;
+
+  min-height: 315px;
+
+  padding: 23px 24px;
+
+  border-radius: 18px;
+
+  border: 1px solid var(--border);
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow);
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.quadrant:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 18px 42px rgba(31, 41, 55, 0.08);
+}
+
+
+/* =========================================================
+   SOFT BACKGROUND SHAPES
+   ========================================================= */
+
+.quadrant::after {
+  content: "";
+
+  position: absolute;
+
+  width: 170px;
+  height: 170px;
+
+  border-radius: 50%;
+
+  right: -80px;
+  bottom: -90px;
+
+  opacity: 0.25;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   QUADRANT COLORS
+   ========================================================= */
+
+.do {
+  background: linear-gradient(
+    135deg,
+    #fff5f5 0%,
+    #fff0f2 100%
+  );
+
+  border-top: 2px solid var(--do-accent);
+}
+
+.do::after {
+  background: #f4a0a3;
+}
+
+
+.schedule {
+  background: linear-gradient(
+    135deg,
+    #f2faf5 0%,
+    #eaf7f0 100%
+  );
+
+  border-top: 2px solid var(--schedule-accent);
+}
+
+.schedule::after {
+  background: #91d0ab;
+}
+
+
+.delegate {
+  background: linear-gradient(
+    135deg,
+    #fffaf0 0%,
+    #fff5df 100%
+  );
+
+  border-top: 2px solid var(--delegate-accent);
+}
+
+.delegate::after {
+  background: #efc76f;
+}
+
+
+.eliminate {
+  background: linear-gradient(
+    135deg,
+    #f7f8fa 0%,
+    #f0f2f5 100%
+  );
+
+  border-top: 2px solid var(--eliminate-accent);
+}
+
+.eliminate::after {
+  background: #c2c8d2;
+}
+
+
+/* =========================================================
+   QUADRANT HEADER
+   ========================================================= */
+
+.quadrant h2 {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: 4px;
+
+  font-size: 16px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  letter-spacing: -0.35px;
+
+  color: #172033;
+}
+
+.quadrant h2 span {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+  font-weight: 500;
+
+  letter-spacing: 0;
+
+  color: #687386;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.empty {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -20%);
+
+  width: 80%;
+
+  text-align: center;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  color: #8c96a6;
+}
+
+
+/* Add subtle empty-state visual using CSS */
+.empty::before {
+  content: "";
+
+  display: block;
+
+  width: 38px;
+  height: 46px;
+
+  margin: 0 auto 12px;
+
+  border: 2px solid currentColor;
+
+  border-radius: 5px;
+
+  opacity: 0.28;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   TASK CARD
+   ========================================================= */
+
+.task {
+  position: relative;
+  z-index: 3;
+
+  margin-top: 18px;
+
+  padding: 16px 17px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid rgba(30, 41, 59, 0.07);
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 7px 18px rgba(31, 41, 55, 0.055);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.task:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 11px 25px rgba(31, 41, 55, 0.08);
+}
+
+
+/* =========================================================
+   TASK TITLE
+   ========================================================= */
+
+.task h3 {
+  margin-bottom: 6px;
+
+  font-size: 14px;
+
+  line-height: 1.3;
+
+  font-weight: 750;
+
+  letter-spacing: -0.2px;
+
+  color: #172033;
+}
+
+
+/* =========================================================
+   TASK DESCRIPTION
+   ========================================================= */
+
+.task p {
+  margin-bottom: 13px;
+
+  font-size: 11.5px;
+
+  line-height: 1.5;
+
+  color: #718096;
+}
+
+
+/* =========================================================
+   DELETE FORM
+   ========================================================= */
+
+.task form {
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+
+/* =========================================================
+   DELETE BUTTON
+   ========================================================= */
+
+.delete-btn {
+  padding: 7px 11px;
+
+  background: #fff;
+
+  color: #e15d64;
+
+  border: 1px solid #f4c8cb;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 10.5px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #e15d64;
+
+  color: white;
+
+  border-color: #e15d64;
+}
+
+
+/* =========================================================
+   ADD TASK FORM
+   ========================================================= */
+
+.task-form {
+  width: min(560px, calc(100% - 40px));
+
+  margin: 42px auto;
+
+  padding: 30px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid rgba(30, 41, 59, 0.08);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 18px 50px rgba(31, 41, 55, 0.08);
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   FORM LABELS
+   ========================================================= */
+
+.task-form label {
+  margin-top: 17px;
+
+  margin-bottom: 7px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  color: #465166;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.task-form input[type="text"],
+.task-form textarea {
+  width: 100%;
+
+  padding: 11px 13px;
+
+  background: #fafbfc;
+
+  border: 1px solid #e0e4ea;
+
+  border-radius: 9px;
+
+  color: #172033;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.task-form input[type="text"]:focus,
+.task-form textarea:focus {
+  background: #ffffff;
+
+  border-color: #9ba4b4;
+
+  box-shadow:
+    0 0 0 4px rgba(23, 32, 51, 0.045);
+}
+
+.task-form textarea {
+  min-height: 110px;
+
+  resize: vertical;
+}
+
+
+/* =========================================================
+   CHECKBOXES
+   ========================================================= */
+
+.checkbox-label {
+  display: flex !important;
+
+  flex-direction: row;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 10px 12px;
+
+  margin-top: 8px !important;
+
+  background: #f6f7f8;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.checkbox-label:hover {
+  background: #eef0f3;
+}
+
+.checkbox-label input {
+  width: 15px;
+
+  height: 15px;
+
+  accent-color: #172033;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.submit-btn {
+  margin-top: 22px;
+
+  padding: 12px;
+
+  background: #172033;
+
+  color: #ffffff;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: #252f44;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  header {
+    height: 64px;
+
+    padding: 0 18px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  .add-btn {
+    height: 37px;
+
+    padding: 0 13px;
+  }
+
+  .intro {
+    width: calc(100% - 36px);
+
+    padding-top: 24px;
+  }
+
+  .intro h2 {
+    font-size: 24px;
+  }
+
+  .matrix {
+    width: calc(100% - 36px);
+
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+
+    padding-top: 12px;
+  }
+
+  .quadrant {
+    min-height: 280px;
+  }
+
+  .task-form {
+    margin: 25px auto;
+
+    padding: 23px;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .intro h2 {
+    font-size: 21px;
+  }
+
+  .quadrant {
+    padding: 19px;
+  }
+
+  .quadrant h2 {
+    font-size: 15px;
+  }
+}

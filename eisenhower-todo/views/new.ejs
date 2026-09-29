@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add Task - Eisenhower Todo</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Add New Task</h1>
+    <a class="add-btn" href="/">Back to Matrix</a>
+  </header>
+
+  <form class="task-form" action="/tasks" method="POST">
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" required />
+
+    <label for="description">Description</label>
+    <textarea id="description" name="description" rows="4"></textarea>
+
+    <label class="checkbox-label">
+      <input type="checkbox" name="isUrgent" />
+      Urgent
+    </label>
+
+    <label class="checkbox-label">
+      <input type="checkbox" name="isImportant" />
+      Important
+    </label>
+
+    <button type="submit" class="submit-btn">Add Task</button>
+  </form>
+</body>
+</html>

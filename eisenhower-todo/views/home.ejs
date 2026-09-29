@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Eisenhower Todo</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Eisenhower Todo</h1>
+    <a class="add-btn" href="/tasks/new">+ Add Task</a>
+  </header>
+
+  <div class="intro">
+  <div>
+    <h2>Focus on what matters</h2>
+    <p>Organize your tasks by urgency and importance.</p>
+  </div>
+</div>
+
+  <div class="matrix">
+    <div class="quadrant do">
+      <h2>DO <span>Urgent + Important</span></h2>
+      <% quadrants.do.forEach(task => { %>
+        <div class="task">
+          <h3><%= task.title %></h3>
+          <p><%= task.description %></p>
+          <form action="/tasks/<%= task._id %>/delete" method="POST">
+            <button type="submit" class="delete-btn">Delete</button>
+          </form>
+        </div>
+      <% }) %>
+      <% if (quadrants.do.length === 0) { %><p class="empty">No tasks</p><% } %>
+    </div>
+
+    <div class="quadrant schedule">
+      <h2>SCHEDULE <span>Not Urgent + Important</span></h2>
+      <% quadrants.schedule.forEach(task => { %>
+        <div class="task">
+          <h3><%= task.title %></h3>
+          <p><%= task.description %></p>
+          <form action="/tasks/<%= task._id %>/delete" method="POST">
+            <button type="submit" class="delete-btn">Delete</button>
+          </form>
+        </div>
+      <% }) %>
+      <% if (quadrants.schedule.length === 0) { %><p class="empty">No tasks</p><% } %>
+    </div>
+
+    <div class="quadrant delegate">
+      <h2>DELEGATE <span>Urgent + Not Important</span></h2>
+      <% quadrants.delegate.forEach(task => { %>
+        <div class="task">
+          <h3><%= task.title %></h3>
+          <p><%= task.description %></p>
+          <form action="/tasks/<%= task._id %>/delete" method="POST">
+            <button type="submit" class="delete-btn">Delete</button>
+          </form>
+        </div>
+      <% }) %>
+      <% if (quadrants.delegate.length === 0) { %><p class="empty">No tasks</p><% } %>
+    </div>
+
+    <div class="quadrant eliminate">
+      <h2>ELIMINATE <span>Not Urgent + Not Important</span></h2>
+      <% quadrants.eliminate.forEach(task => { %>
+        <div class="task">
+          <h3><%= task.title %></h3>
+          <p><%= task.description %></p>
+          <form action="/tasks/<%= task._id %>/delete" method="POST">
+            <button type="submit" class="delete-btn">Delete</button>
+          </form>
+        </div>
+      <% }) %>
+      <% if (quadrants.eliminate.length === 0) { %><p class="empty">No tasks</p><% } %>
+    </div>
+  </div>
+</body>
+</html>
