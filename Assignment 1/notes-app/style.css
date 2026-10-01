@@ -1,0 +1,426 @@
+/* --------------------------------------------------
+   RESET
+-------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* --------------------------------------------------
+   ROOT
+-------------------------------------------------- */
+
+:root {
+    --background: #0b0c0e;
+    --surface: #111316;
+    --surface-hover: #15171a;
+
+    --border: #292c30;
+    --border-light: #202328;
+
+    --text: #e8e8e6;
+    --text-secondary: #96999d;
+    --text-muted: #65686c;
+
+    --button: #e5e5e2;
+    --button-text: #101113;
+
+    --danger: #b0b0ad;
+
+    --radius: 8px;
+}
+
+
+/* --------------------------------------------------
+   BODY
+-------------------------------------------------- */
+
+body {
+    min-height: 100vh;
+
+    background: var(--background);
+    color: var(--text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* --------------------------------------------------
+   MAIN APP
+-------------------------------------------------- */
+
+.app {
+    width: min(900px, calc(100% - 40px));
+    margin: 0 auto;
+
+    padding: 72px 0 100px;
+}
+
+
+/* --------------------------------------------------
+   HEADER
+-------------------------------------------------- */
+
+.header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    padding-bottom: 28px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+    margin-bottom: 10px;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+
+    color: var(--text-muted);
+}
+
+.header h1 {
+    font-size: 42px;
+    line-height: 1;
+
+    font-weight: 500;
+    letter-spacing: -0.04em;
+}
+
+.note-count {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+
+/* --------------------------------------------------
+   NOTE COMPOSER
+-------------------------------------------------- */
+
+.composer {
+    margin-top: 32px;
+
+    padding: 24px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+}
+
+
+/* Inputs */
+
+.composer input,
+.composer textarea,
+.search-wrapper input {
+    width: 100%;
+
+    background: transparent;
+
+    border: none;
+    outline: none;
+
+    color: var(--text);
+
+    font-family: inherit;
+}
+
+
+.composer input {
+    font-size: 22px;
+    font-weight: 500;
+
+    letter-spacing: -0.02em;
+
+    margin-bottom: 16px;
+}
+
+
+.composer textarea {
+    min-height: 130px;
+
+    resize: vertical;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: var(--text-secondary);
+}
+
+
+.composer input::placeholder,
+.composer textarea::placeholder,
+.search-wrapper input::placeholder {
+    color: var(--text-muted);
+}
+
+
+/* --------------------------------------------------
+   COMPOSER FOOTER
+-------------------------------------------------- */
+
+.composer-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 18px;
+
+    padding-top: 16px;
+
+    border-top: 1px solid var(--border-light);
+}
+
+
+.hint {
+    font-size: 12px;
+
+    color: var(--text-muted);
+}
+
+
+/* --------------------------------------------------
+   BUTTON
+-------------------------------------------------- */
+
+button {
+    border: none;
+    outline: none;
+
+    background: var(--button);
+    color: var(--button-text);
+
+    padding: 10px 18px;
+
+    border-radius: 5px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 150ms ease,
+        color 150ms ease;
+}
+
+
+button:hover {
+    background: #ffffff;
+}
+
+
+button:active {
+    background: #ccccca;
+}
+
+
+/* --------------------------------------------------
+   SEARCH
+-------------------------------------------------- */
+
+.search-wrapper {
+    margin-top: 48px;
+
+    border-bottom: 1px solid var(--border);
+
+    padding-bottom: 12px;
+}
+
+
+.search-wrapper input {
+    font-size: 14px;
+
+    color: var(--text-secondary);
+}
+
+
+/* --------------------------------------------------
+   NOTES CONTAINER
+-------------------------------------------------- */
+
+.notes-container {
+    margin-top: 28px;
+}
+
+
+/* --------------------------------------------------
+   NOTE
+-------------------------------------------------- */
+
+.note {
+    padding: 24px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    position: relative;
+}
+
+
+.note h3 {
+    margin-bottom: 10px;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    letter-spacing: -0.015em;
+}
+
+
+.note p {
+    max-width: 760px;
+
+    margin-bottom: 18px;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    white-space: pre-wrap;
+}
+
+
+.note small {
+    display: block;
+
+    font-size: 11px;
+
+    color: var(--text-muted);
+
+    letter-spacing: 0.02em;
+}
+
+
+/* --------------------------------------------------
+   NOTE ACTIONS
+-------------------------------------------------- */
+
+.note-buttons {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 16px;
+}
+
+
+.note-buttons button {
+    padding: 7px 12px;
+
+    background: transparent;
+
+    border: 1px solid var(--border);
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+
+    font-weight: 500;
+}
+
+
+.note-buttons button:hover {
+    background: var(--surface-hover);
+
+    color: var(--text);
+
+    border-color: #3a3d41;
+}
+
+
+.note-buttons .delete-btn {
+    color: var(--text-muted);
+}
+
+
+/* --------------------------------------------------
+   EMPTY STATE
+-------------------------------------------------- */
+
+.notes-container > p {
+    padding: 50px 0;
+
+    text-align: center;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+}
+
+
+/* --------------------------------------------------
+   FOCUS STATES
+-------------------------------------------------- */
+
+.composer:focus-within {
+    border-color: #3a3d41;
+}
+
+
+.search-wrapper:focus-within {
+    border-color: #45484c;
+}
+
+
+/* --------------------------------------------------
+   MOBILE
+-------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .app {
+        width: min(100% - 28px, 900px);
+
+        padding-top: 40px;
+    }
+
+
+    .header h1 {
+        font-size: 34px;
+    }
+
+
+    .composer {
+        padding: 18px;
+    }
+
+
+    .composer-footer {
+        align-items: flex-start;
+
+        gap: 16px;
+
+        flex-direction: column;
+    }
+
+
+    .composer-footer button {
+        width: 100%;
+    }
+
+
+    .note {
+        padding: 20px 0;
+    }
+
+}

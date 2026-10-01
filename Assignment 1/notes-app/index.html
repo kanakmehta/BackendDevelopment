@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notes</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <p class="eyebrow">PERSONAL SPACE</p>
+                <h1>Notes</h1>
+            </div>
+
+            <p class="note-count" id="noteCount">
+                0 notes
+            </p>
+
+        </header>
+
+
+        <!-- Create Note -->
+        <section class="composer">
+
+            <input
+                type="text"
+                id="noteTitle"
+                placeholder="Title"
+                autocomplete="off"
+            >
+
+            <textarea
+                id="noteContent"
+                placeholder="Write something worth remembering..."
+            ></textarea>
+
+            <div class="composer-footer">
+
+                <span class="hint">
+                    Your notes are saved locally.
+                </span>
+
+                <button onclick="addNote()">
+                    Save note
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Search -->
+        <div class="search-wrapper">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search your notes..."
+                oninput="searchNotes()"
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <!-- Notes -->
+        <section id="notesContainer" class="notes-container"></section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
