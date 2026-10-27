@@ -1,15 +1,19 @@
 <ul class="task-list">
     {% for task in tasks %}
     <li class="task-item">
-        <span class="task-title">
-            {% if task.completed %}<s>{{ task.title }}</s>{% else %}{{ task.title }}{% endif %}
-        </span>
-        <span class="task-actions">
-            <a href="{% url 'toggle_task' task.id %}">Toggle</a>
-            <a href="{% url 'delete_task' task.id %}">Delete</a>
-        </span>
+        <span class="{% if task.completed %}completed{% endif %}">{{ task.title }}</span>
+        <div class="task-actions">
+            <form method="post" action="{% url 'toggle_task' task.id %}">
+                {% csrf_token %}
+                <button type="submit">{% if task.completed %}Mark incomplete{% else %}Mark complete{% endif %}</button>
+            </form>
+            <form method="post" action="{% url 'delete_task' task.id %}">
+                {% csrf_token %}
+                <button class="danger" type="submit">Delete</button>
+            </form>
+        </div>
     </li>
     {% empty %}
-    <li class="empty">No tasks yet.</li>
+    <li>No tasks yet. Add your first task.</li>
     {% endfor %}
 </ul>

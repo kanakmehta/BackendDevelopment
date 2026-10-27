@@ -1,15 +1,18 @@
 {% load static %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}To-Do App{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'todo/style.css' %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Task Tracker{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'todo/css/style.css' %}">
 </head>
 <body>
+    {% include 'todo/header.html' %}
     <main class="container">
         {% block content %}{% endblock %}
     </main>
+    {% include 'todo/footer.html' %}
+    <script src="{% static 'todo/js/app.js' %}" defer></script>
 </body>
 </html>

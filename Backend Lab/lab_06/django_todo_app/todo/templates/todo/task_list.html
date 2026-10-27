@@ -1,9 +1,11 @@
-{% extends "todo/base.html" %}
+{% extends 'todo/base.html' %}
 
-{% block title %}My To-Do List{% endblock %}
+{% block title %}My Tasks | Task Tracker{% endblock %}
 
 {% block content %}
+<section class="panel">
     <h1>My To-Do List</h1>
-    <a class="button" href="{% url 'add_task' %}">Add New Task</a>
-    {% include "todo/includes/task_list_items.html" %}
+    <p><a class="button" href="{% url 'add_task' %}">Add a task</a></p>
+    {% include 'todo/includes/task_list_items.html' %}
+</section>
 {% endblock %}
