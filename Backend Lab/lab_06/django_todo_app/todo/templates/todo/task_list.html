@@ -1,25 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>To-Do List</title>
-</head>
-<body>
+{% extends "todo/base.html" %}
+
+{% block title %}My To-Do List{% endblock %}
+
+{% block content %}
     <h1>My To-Do List</h1>
-    <a href="{% url 'add_task' %}">Add New Task</a>
-    <ul>
-        {% for task in tasks %}
-        <li>
-            {% if task.completed %}
-                <s>{{ task.title }}</s>
-            {% else %}
-                {{ task.title }}
-            {% endif %}
-            <a href="{% url 'toggle_task' task.id %}">Toggle</a>
-            <a href="{% url 'delete_task' task.id %}">Delete</a>
-        </li>
-        {% empty %}
-        <li>No tasks yet.</li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+    <a class="button" href="{% url 'add_task' %}">Add New Task</a>
+    {% include "todo/includes/task_list_items.html" %}
+{% endblock %}
