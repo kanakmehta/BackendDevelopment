@@ -1,308 +1,396 @@
-# Backend Development
+# Backend Development - UPES
 
-A collection of backend development lab exercises, theory work, and a
-complete **Eisenhower Todo** application built as part of backend
-development coursework.
+Welcome to my **Backend Development** course repository.
 
-## 📁 Repository Structure
+This repository contains my practical experiments, theory implementations, lab assignments, theory assignments, PBL work, and lab test/viva work completed as part of the **Backend Development course at UPES**.
 
-``` text
-BackendDevelopment/
-│
-├── Backend Lab/
-│   ├── lab_01/
-│   ├── lab_02/
-│   └── lab_03/
-│
-├── Backend Theory/
-│   └── Unit 1/
-│       ├── demo1/
-│       └── demo2/
-│
-├── eisenhower-todo/
-│   ├── public/
-│   │   └── style.css
-│   ├── views/
-│   │   ├── home.ejs
-│   │   └── new.ejs
-│   ├── .env
-│   ├── .gitignore
-│   ├── app.js
-│   ├── package.json
-│   ├── package-lock.json
-│   └── README.md
-│
-├── .gitignore
-└── README.md
+---
+
+## Student Details
+
+| Detail | Information |
+|---|---|
+| **Name** | Kanak Mehta |
+| **SAP ID** | 590014943 |
+| **Batch** | 4 |
+| **Course** | Backend Development |
+| **University** | UPES |
+
+---
+
+# Course Work
+
+## Lab Experiments
+
+Practical laboratory experiments covering frontend and backend development concepts.
+
+### Topics Include
+
+- HTML5
+- JavaScript
+- Node.js
+- Express.js
+- EJS
+- Cookies & Sessions
+- MongoDB Atlas
+- Mongoose
+
+[View Lab Experiments](./lab/README.md)
+
+---
+
+## Theory
+
+Practical implementations of concepts covered during Backend Development theory classes.
+
+### Unit 1 - Backend Fundamentals
+
+- Express.js & EJS
+- Flask REST API
+- FastAPI CRUD API
+- Express Sessions
+- Server-Side Rendering with FastAPI & Jinja2
+
+### Unit 2 - ORM & Data Validation
+
+- SQLAlchemy ORM
+- SQLite
+- Database Relationships
+- CRUD Operations
+- FastAPI
+- Pydantic Data Validation
+
+[View Theory](./Theory/README.md)
+
+---
+
+# Assignments
+
+Assignments are divided into **Theory Assignments** and **Lab Assignments**.
+
+---
+
+## Theory Assignments
+
+### Assignment 1 - Notes App
+
+A browser-based Notes application demonstrating:
+
+- LocalStorage
+- JSON
+- Add Notes
+- Edit Notes
+- Delete Notes
+- Persistent Browser Storage
+
+[View Assignment 1](./Theory%20Assignment/Assignment_1/README.md)
+
+[Open Live Notes App](./Theory%20Assignment/Assignment_1/)
+
+---
+
+### Assignment 2 - PostgreSQL + JSONB
+
+An interactive assignment exploring how **PostgreSQL JSONB** can combine relational SQL capabilities with flexible document-style data handling.
+
+Topics include:
+
+- PostgreSQL JSONB
+- JSON vs JSONB
+- JSONB Queries
+- JSONB Indexing
+- SQL + NoSQL
+- PostgreSQL vs MongoDB
+- Express.js & EJS
+
+[View Assignment 2](./Theory%20Assignment/Assignment_2/README.md)
+
+### [View All Theory Assignments](./Theory%20Assignment/README.md)
+
+---
+
+## Lab Assignments
+
+### Assignment 1 - User Login System
+
+Session-based user registration, login, protected dashboard, and logout system using **Node.js and Express.js**.
+
+[View Assignment 1](./Lab%20Assignment/Experiment-1-Login/README.md)
+
+### Assignment 2 - Session-Based To-Do List
+
+A To-Do application that stores user tasks using **Express Sessions**.
+
+[View Assignment 2](./Lab%20Assignment/Experiment-2-Todo/README.md)
+
+### [View All Lab Assignments](./Lab%20Assignment/README.md)
+
+---
+
+# PBL Project
+
+## Eisenhower Todo - DevOps Pipeline
+
+An Eisenhower Matrix based task management application used to implement a complete containerization, automated testing, and CI/CD workflow.
+
+### Application Stack
+
+- Node.js
+- Express.js
+- EJS
+- MongoDB
+- HTML & CSS
+
+### DevOps Implementation
+
+- Docker
+- Docker Compose
+- MongoDB Container
+- Persistent Docker Volume
+- Python Automated Testing
+- GitHub Actions
+- Docker Hub
+- GitHub Repository Secrets
+
+### Application Features
+
+Tasks are automatically categorized according to urgency and importance into four Eisenhower Matrix quadrants:
+
+1. DO - Urgent + Important
+2. SCHEDULE - Not Urgent + Important
+3. DELEGATE - Urgent + Not Important
+4. ELIMINATE - Not Urgent + Not Important
+
+### Automated Testing
+
+The `automationTesting.py` script automatically verifies:
+
+- `GET /` - Home page
+- `GET /tasks/new` - Add task page
+- `POST /tasks` - Create task
+- Empty title validation
+- `POST /tasks/:id/delete` - Delete task
+
+Final automated testing result:
+
+```text
+Passed: 5
+Failed: 0
 ```
 
-## 📝 Eisenhower Todo
+### CI/CD Pipeline
 
-The `eisenhower-todo` project is a server-rendered Todo List application
-based on the **Eisenhower Matrix**.
+The GitHub Actions workflow automatically performs:
 
-It allows users to create tasks, classify them according to urgency and
-importance, view them in appropriate quadrants, and delete completed or
-unwanted tasks.
+```text
+Code Push
+   |
+   v
+GitHub Actions
+   |
+   v
+Docker Compose
+   |
+   v
+Start Express + MongoDB
+   |
+   v
+Automated Python Testing
+   |
+   v
+All Tests Pass
+   |
+   v
+Build Docker Image
+   |
+   v
+Push Image to Docker Hub
+```
 
-### ✨ Features
+The Docker image is built and published only after all automated tests pass successfully.
 
--   Add new tasks
--   Add task title and description
--   Mark tasks as **Urgent**
--   Mark tasks as **Important**
--   Automatically organize tasks into Eisenhower Matrix quadrants
--   View stored tasks
--   Delete tasks
--   Store task data in MongoDB
--   Server-side rendering using EJS
--   Development support using Nodemon
+[View PBL Project](https://github.com/kanakmehta/eisenhower-todo-devops)
 
-### 🧠 Eisenhower Matrix
+---
 
-  Category        Urgent   Important  Action
-  -------------- -------- ----------- ------------------------
-  🔥 Do First      Yes        Yes     Complete immediately
-  📅 Schedule       No        Yes     Plan for later
-  ⚡ Delegate      Yes        No      Delegate when possible
-  💤 Eliminate      No        No      Remove or avoid
+# Lab Test / Viva
 
-## 🛠️ Technologies Used
+## My Notes
+
+A full-stack Notes Management application developed using:
+
+- Node.js
+- Express.js
+- EJS
+- PostgreSQL
+- HTML & CSS
+
+The application supports:
+
+- Creating notes
+- Categorizing notes
+- Viewing saved notes
+- Deleting notes
+- Persistent PostgreSQL storage
+
+[View Lab Test / Viva Project](./Lab_Test%28Viva%29/my-notes/README.md)
+
+---
+
+# Repository Structure
+
+```text
+BackendDevelopment/
+|
+|-- lab/
+|   |-- Experiment 1 - HTML5
+|   |-- Experiment 5 - JavaScript
+|   |-- Experiment 12 - Node.js, Express & EJS
+|   |-- Experiment 12B - Cookies & Sessions
+|   `-- Experiment 13A - MongoDB & Mongoose
+|
+|-- Lab Assignment/
+|   |-- Experiment 1 - Login System
+|   `-- Experiment 2 - To-Do List
+|
+|-- Lab_Test(Viva)/
+|   `-- My Notes - Express + EJS + PostgreSQL
+|
+|-- Theory/
+|   |
+|   |-- Unit 1/
+|   |   |-- Day 1 - Express & EJS
+|   |   |-- Day 2 - Flask REST API
+|   |   |-- Day 3 - FastAPI CRUD
+|   |   |-- Day 4 - Express Sessions
+|   |   `-- Day 5 - FastAPI + Jinja2 SSR
+|   |
+|   `-- Unit 2/
+|       |-- Day 1 - SQLAlchemy ORM + SQLite
+|       `-- Day 2 - FastAPI + Pydantic Validation
+|
+|-- Theory Assignment/
+|   |-- Assignment 1 - LocalStorage Notes App
+|   `-- Assignment 2 - PostgreSQL JSONB
+|
+`-- README.md
+```
+
+---
+
+# Technologies & Tools
+
+Throughout this repository, I have worked with:
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- DOM Manipulation
+- LocalStorage
+- JSON
 
 ### Backend
 
--   Node.js
--   Express.js
+- Node.js
+- Express.js
+- Python
+- Flask
+- FastAPI
 
-### Database
+### Server-Side Rendering
 
--   MongoDB
--   MongoDB Atlas
--   MongoDB Node.js Driver
+- EJS
+- Jinja2
 
-### Templating & Frontend
+### Databases
 
--   EJS
--   HTML5
--   CSS3
+- PostgreSQL
+- MongoDB
+- MongoDB Atlas
+- SQLite
+
+### Database Technologies
+
+- Mongoose
+- SQLAlchemy ORM
+- PostgreSQL JSONB
+
+### API & Validation
+
+- REST APIs
+- Pydantic
+- JSON
+- HTTP Methods
+- HTTP Status Codes
+
+### State Management
+
+- Cookies
+- Express Sessions
+- LocalStorage
+
+### DevOps & Containerization
+
+- Docker
+- Docker Compose
+- Docker Hub
+- GitHub Actions
+- CI/CD
+- Automated Testing
+- GitHub Secrets
 
 ### Development Tools
 
--   Nodemon
--   dotenv
--   Visual Studio Code
+- Git
+- GitHub
+- VS Code
+- GitHub Pages
+- Docker Desktop
+- MongoDB Compass
 
-## 🔄 Application Flow
+---
 
-``` text
-User
-  ↓
-Browser
-  ↓
-Express.js Server
-  ↓
-Route Handler
-  ↓
-MongoDB
-  ↓
-EJS Template
-  ↓
-Browser
-```
+# GitHub Pages
 
-### Add Task Flow
+The repository documentation and supported static projects can be made available through GitHub Pages.
 
-1.  User opens the Add Task page.
-2.  Express renders the task form using EJS.
-3.  The user submits the form.
-4.  Express receives the form data.
-5.  The server validates the task title.
-6.  The task is inserted into MongoDB.
-7.  The user is redirected to the home page.
-8.  The home page displays the updated task list.
+Backend applications using Node.js, Express.js, Flask, FastAPI, PostgreSQL, or MongoDB require a running backend server and therefore cannot run directly through GitHub Pages.
 
-### Delete Task Flow
+---
 
-1.  User clicks the Delete button.
-2.  A POST request is sent to `/tasks/:id/delete`.
-3.  Express reads the task ID from the route parameter.
-4.  The ID is validated and converted to a MongoDB `ObjectId`.
-5.  The corresponding document is deleted from MongoDB.
-6.  The user is redirected to the home page.
+# Quick Navigation
 
-## 🌐 Routes
+| Section | Open |
+|---|---|
+| **Lab Experiments** | [View Labs](./lab/README.md) |
+| **Theory** | [View Theory](./Theory/README.md) |
+| **Theory Assignments** | [View Theory Assignments](./Theory%20Assignment/README.md) |
+| **Lab Assignments** | [View Lab Assignments](./Lab%20Assignment/README.md) |
+| **Lab Test / Viva** | [View Lab Test](./Lab_Test%28Viva%29/my-notes/README.md) |
+| **PBL Project** | [View PBL](https://github.com/kanakmehta/eisenhower-todo-devops) |
 
-  Method   Route                 Purpose
-  -------- --------------------- --------------------------------
-  GET      `/`                   Display all tasks
-  GET      `/tasks/new`          Display the task creation form
-  POST     `/tasks`              Create a new task
-  POST     `/tasks/:id/delete`   Delete a task
+---
 
-## 🗄️ Database
+# Repository Purpose
 
-The application uses MongoDB Atlas.
+This repository serves as an organized record of my **Backend Development coursework at UPES**.
 
-Database:
+It demonstrates my practical understanding of backend concepts ranging from basic HTTP servers and REST APIs to sessions, server-side rendering, database connectivity, ORM, data validation, PostgreSQL, MongoDB, JSONB, containerization, automated testing, and CI/CD workflows.
 
-``` text
-todo_lab
-```
+The repository also demonstrates practical experience with modern development workflows using Docker, Docker Compose, GitHub Actions, and Docker Hub.
 
-Collection:
+---
 
-``` text
-tasks
-```
+## Developed & Maintained By
 
-A task document contains fields such as:
+**Kanak Mehta**  
+**SAP ID:** 590014943  
+**Batch:** 4  
+**Course:** Backend Development  
+**University:** UPES
 
-``` javascript
-{
-  title: "Complete Backend Assignment",
-  description: "Finish the backend lab",
-  isUrgent: true,
-  isImportant: true,
-  createdAt: new Date()
-}
-```
+---
 
-MongoDB also provides a unique `_id` for each task document.
-
-## 🔐 Environment Variables
-
-The MongoDB connection string is stored in `.env`.
-
-Example:
-
-``` env
-MONGODB_URI=your_mongodb_connection_string
-PORT=3000
-```
-
-### Security
-
-Never commit `.env` or database credentials to GitHub.
-
-The `.gitignore` file should include:
-
-``` text
-node_modules/
-.env
-```
-
-## ⚙️ Running the Project
-
-### 1. Clone the repository
-
-``` bash
-git clone <your-repository-url>
-```
-
-### 2. Open the project
-
-``` bash
-cd BackendDevelopment/eisenhower-todo
-```
-
-### 3. Install dependencies
-
-``` bash
-npm install
-```
-
-### 4. Configure `.env`
-
-Create a `.env` file and add your MongoDB Atlas connection string:
-
-``` env
-MONGODB_URI=your_mongodb_connection_string
-PORT=3000
-```
-
-### 5. Start the application
-
-For normal execution:
-
-``` bash
-npm start
-```
-
-For development with Nodemon:
-
-``` bash
-npm run dev
-```
-
-### 6. Open the application
-
-Visit:
-
-``` text
-http://localhost:3000
-```
-
-## 📦 NPM Scripts
-
-  Command         Description
-  --------------- --------------------------------------
-  `npm start`     Starts the application using Node.js
-  `npm run dev`   Starts the application using Nodemon
-
-## 🔧 Backend Concepts Demonstrated
-
-This repository and project demonstrate:
-
--   Node.js runtime
--   Express.js
--   HTTP methods
--   Routing
--   Middleware
--   Request and response objects
--   Form handling with `express.urlencoded()`
--   Static file serving with `express.static()`
--   EJS server-side rendering
--   MongoDB database operations
--   MongoDB Atlas
--   MongoDB `ObjectId`
--   Environment variables with dotenv
--   `async/await`
--   Promises
--   Error handling
--   Nodemon
-
-## 📚 Backend Lab & Theory
-
-The repository also contains:
-
--   Backend laboratory exercises
--   Backend theory demonstrations
--   Unit-wise learning material
--   Practical implementations related to backend development
-
-## 🎯 Learning Objectives
-
-The project is designed to provide practical understanding of:
-
--   Building a backend application with Node.js and Express
--   Connecting a web application to MongoDB
--   Handling HTTP requests and responses
--   Processing HTML form data
--   Rendering dynamic pages with EJS
--   Performing database operations
--   Managing environment variables
--   Structuring a backend project
-
-## 👩‍💻 Project
-
-**Backend Development Coursework**
-
-Built with:
-
-``` text
-Node.js • Express.js • MongoDB • EJS
-```
-
-## 📄 License
-
-This repository is intended for educational and academic purposes.
+> Learning Backend Development through practical implementation, from basic web servers to APIs, databases, ORM, validation, sessions, containerization, automated testing, and CI/CD.
