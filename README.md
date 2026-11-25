@@ -235,46 +235,6 @@ The application supports:
 
 [View Lab Test / Viva Project](./Lab_Test%28Viva%29/my-notes/README.md)
 
----
-
-# Repository Structure
-
-```text
-BackendDevelopment/
-|
-|-- lab/
-|   |-- Experiment 1 - HTML5
-|   |-- Experiment 5 - JavaScript
-|   |-- Experiment 12 - Node.js, Express & EJS
-|   |-- Experiment 12B - Cookies & Sessions
-|   `-- Experiment 13A - MongoDB & Mongoose
-|
-|-- Lab Assignment/
-|   |-- Experiment 1 - Login System
-|   `-- Experiment 2 - To-Do List
-|
-|-- Lab_Test(Viva)/
-|   `-- My Notes - Express + EJS + PostgreSQL
-|
-|-- Theory/
-|   |
-|   |-- Unit 1/
-|   |   |-- Day 1 - Express & EJS
-|   |   |-- Day 2 - Flask REST API
-|   |   |-- Day 3 - FastAPI CRUD
-|   |   |-- Day 4 - Express Sessions
-|   |   `-- Day 5 - FastAPI + Jinja2 SSR
-|   |
-|   `-- Unit 2/
-|       |-- Day 1 - SQLAlchemy ORM + SQLite
-|       `-- Day 2 - FastAPI + Pydantic Validation
-|
-|-- Theory Assignment/
-|   |-- Assignment 1 - LocalStorage Notes App
-|   `-- Assignment 2 - PostgreSQL JSONB
-|
-`-- README.md
-```
 
 ---
 
