@@ -18,11 +18,11 @@ A minimal, dark-themed Notes App built using **HTML, CSS, and JavaScript**. The 
 
 ## Technologies Used
 
-- **HTML5** — Structure of the application
-- **CSS3** — Styling, layout, responsive design, and dark theme
-- **JavaScript** — Application logic and DOM manipulation
-- **LocalStorage API** — Persistent browser-side storage
-- **JSON** — Converting and storing JavaScript objects
+- **HTML5** - Structure of the application
+- **CSS3** - Styling, layout, responsive design, and dark theme
+- **JavaScript** - Application logic and DOM manipulation
+- **LocalStorage API** - Persistent browser-side storage
+- **JSON** - Converting and storing JavaScript objects
 
 ## Project Structure
 

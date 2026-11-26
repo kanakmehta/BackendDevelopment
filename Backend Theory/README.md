@@ -1,66 +1,26 @@
 # Backend Theory
 
-This folder contains the theoretical concepts, demonstrations, and code implementations covered as part of the Backend Development course.
+This folder contains theory-class demonstrations, unit-wise backend implementations, and theory assignment work for the Backend Development course.
 
-The content is organized unit-wise and includes examples that demonstrate backend frameworks, server-side programming, databases, and related backend development concepts.
+## Theory Content
 
-## 📚 Topics Covered
+| Section | Report | Source Code |
+|---|---|---|
+| Theory Class 1 | [View Report](./Theory_class1/README.md) | [View Source Code](./Theory_class1/) |
+| Unit 1: Backend Fundamentals | [View Report](./Unit%201/README.md) | [View Source Code](./Unit%201/) |
+| Unit 2: Data Validation and ORM | [View Report](./Unit%202/README.md) | [View Source Code](./Unit%202/) |
+| Unit 3: Django Student Management API | [View Report](./Unit%203/README.md) | [View Source Code](./Unit%203/) |
+| Unit 4: Docker and Containerization | [View Report](./Unit%204/README.md) | [View Source Code](./Unit%204/) |
+| Theory Assignment 2 | [View Assignment](./590014943Assignment2.md) | [View Source](./590014943Assignment2.md) |
 
-### Unit 1
+## Topics Covered
 
-Introduction to backend development and server-side programming using:
+- Node.js and Express.js
+- EJS server-side rendering
+- Flask APIs
+- FastAPI and Pydantic validation
+- SQLAlchemy ORM and SQLite
+- Django routing and middleware
+- Docker and Docker Compose
 
-- Node.js
-- Express.js
-- EJS
-- Flask
-- Request and response handling
-- Server-side rendering
-- Routing
-
-### Unit 2
-
-Backend development concepts related to databases and data management, including:
-
-- MongoDB
-- Mongoose
-- PostgreSQL
-- ORM concepts
-- Database connectivity
-- CRUD operations
-- Working with models and schemas
-
-## 🛠️ Technologies Used
-
-- **Node.js** – JavaScript runtime for server-side development
-- **Express.js** – Web framework for Node.js
-- **EJS** – Embedded JavaScript templating engine
-- **Flask** – Python web framework
-- **MongoDB** – NoSQL database
-- **Mongoose** – ODM for MongoDB
-- **PostgreSQL** – Relational database
-- **Python** – Programming language used for Flask-based demonstrations
-- **JavaScript** – Programming language used for Node.js-based demonstrations
-
-## 📁 Structure
-
-The theory content is organized into different units, with each unit containing relevant demonstrations and source code.
-
-```text
-Backend Theory/
-│
-├── Unit 1/
-│   ├── Node.js
-│   ├── Express.js
-│   ├── EJS
-│   ├── Flask
-│   └── ...
-│
-├── Unit 2/
-│   ├── MongoDB
-│   ├── Mongoose
-│   ├── PostgreSQL
-│   ├── ORM
-│   └── ...
-│
-└── README.md
+Each unit README provides direct links to its practical reports and source-code folders.
