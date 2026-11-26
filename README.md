@@ -1,356 +1,96 @@
 # Backend Development - UPES
 
-Welcome to my **Backend Development** course repository.
-
-This repository contains my practical experiments, theory implementations, lab assignments, theory assignments, PBL work, and lab test/viva work completed as part of the **Backend Development course at UPES**.
-
----
+This repository contains practical experiments, theory implementations, assignments, and PBL work completed as part of the Backend Development course at UPES.
 
 ## Student Details
 
 | Detail | Information |
 |---|---|
-| **Name** | Kanak Mehta |
-| **SAP ID** | 590014943 |
-| **Batch** | 4 |
-| **Course** | Backend Development |
-| **University** | UPES |
+| Name | Kanak Mehta |
+| SAP ID | 590014943 |
+| Batch | 4 |
+| Course | Backend Development |
+| University | UPES |
 
----
+## Repository Navigation
 
-# Course Work
+| Section | Report / Documentation | Source Code |
+|---|---|---|
+| Backend Lab | [View Lab Reports](./Backend%20Lab/README.md) | [View Source Code](./Backend%20Lab/) |
+| Backend Theory | [View Theory Documentation](./Backend%20Theory/README.md) | [View Source Code](./Backend%20Theory/) |
+| Assignment 1: Notes App | [View Assignment Report](./Assignment%201/notes-app/README.md) | [View Source Code](./Assignment%201/notes-app/) |
+| Eisenhower Todo Application | [View Project Report](./eisenhower-todo/README.md) | [View Source Code](./eisenhower-todo/) |
+| PBL Activity | [View PBL Reference](./PBL_activity) | [Open PBL Repository](https://github.com/kanakmehta/eisenhower-todo-devops) |
 
-## Lab Experiments
+## Backend Lab
 
-Practical laboratory experiments covering frontend and backend development concepts.
+The Backend Lab contains practical work covering frontend foundations and backend frameworks. The lab index provides separate Report and Source Code links for each implemented experiment.
 
-### Topics Include
+Topics represented in the uploaded lab work include:
 
 - HTML5
 - JavaScript
 - Node.js
 - Express.js
 - EJS
-- Cookies & Sessions
-- MongoDB Atlas
-- Mongoose
-
-[View Lab Experiments](./lab/README.md)
-
----
-
-## Theory
-
-Practical implementations of concepts covered during Backend Development theory classes.
-
-### Unit 1 - Backend Fundamentals
-
-- Express.js & EJS
-- Flask REST API
-- FastAPI CRUD API
-- Express Sessions
-- Server-Side Rendering with FastAPI & Jinja2
-
-### Unit 2 - ORM & Data Validation
-
-- SQLAlchemy ORM
-- SQLite
-- Database Relationships
-- CRUD Operations
+- Cookies and sessions
+- MongoDB and Mongoose
 - FastAPI
-- Pydantic Data Validation
+- Django
 
-[View Theory](./Theory/README.md)
+[Open Backend Lab](./Backend%20Lab/README.md)
 
----
+## Backend Theory
 
-# Assignments
+The Backend Theory section contains unit-wise demonstrations and theory assignment material.
 
-Assignments are divided into **Theory Assignments** and **Lab Assignments**.
+| Unit | Report | Source Code |
+|---|---|---|
+| Unit 1: Backend Fundamentals | [View Report](./Backend%20Theory/Unit%201/README.md) | [View Source Code](./Backend%20Theory/Unit%201/) |
+| Unit 2: Data Validation and ORM | [View Report](./Backend%20Theory/Unit%202/README.md) | [View Source Code](./Backend%20Theory/Unit%202/) |
+| Unit 3: Django Student Management API | [View Report](./Backend%20Theory/Unit%203/README.md) | [View Source Code](./Backend%20Theory/Unit%203/) |
+| Unit 4: Docker and Containerization | [View Report](./Backend%20Theory/Unit%204/README.md) | [View Source Code](./Backend%20Theory/Unit%204/) |
+| Theory Assignment 2 | [View Assignment](./Backend%20Theory/590014943Assignment2.md) | [View Source](./Backend%20Theory/590014943Assignment2.md) |
 
----
+[Open Backend Theory](./Backend%20Theory/README.md)
 
-## Theory Assignments
+## Assignment 1: Notes App
 
-### Assignment 1 - Notes App
+Assignment 1 is a browser-based Notes application built with HTML, CSS, and JavaScript. It demonstrates CRUD operations, JSON data handling, search, and persistent browser storage using LocalStorage.
 
-A browser-based Notes application demonstrating:
+- [View Report](./Assignment%201/notes-app/README.md)
+- [View Source Code](./Assignment%201/notes-app/)
 
-- LocalStorage
-- JSON
-- Add Notes
-- Edit Notes
-- Delete Notes
-- Persistent Browser Storage
+## Eisenhower Todo Application
 
-[View Assignment 1](./Theory%20Assignment/Assignment_1/README.md)
+This project is an Express and EJS task manager backed by MongoDB Atlas. Tasks are grouped into the four Eisenhower Matrix categories according to urgency and importance.
 
-[Open Live Notes App](./Theory%20Assignment/Assignment_1/)
+- [View Report](./eisenhower-todo/README.md)
+- [View Source Code](./eisenhower-todo/)
 
----
+## PBL Activity
 
-### Assignment 2 - PostgreSQL + JSONB
+The `PBL_activity` file in this repository points to the separate Eisenhower Todo DevOps repository:
 
-An interactive assignment exploring how **PostgreSQL JSONB** can combine relational SQL capabilities with flexible document-style data handling.
+[Open PBL Repository](https://github.com/kanakmehta/eisenhower-todo-devops)
 
-Topics include:
+## Technologies Represented in the Repository
 
-- PostgreSQL JSONB
-- JSON vs JSONB
-- JSONB Queries
-- JSONB Indexing
-- SQL + NoSQL
-- PostgreSQL vs MongoDB
-- Express.js & EJS
-
-[View Assignment 2](./Theory%20Assignment/Assignment_2/README.md)
-
-### [View All Theory Assignments](./Theory%20Assignment/README.md)
-
----
-
-## Lab Assignments
-
-### Assignment 1 - User Login System
-
-Session-based user registration, login, protected dashboard, and logout system using **Node.js and Express.js**.
-
-[View Assignment 1](./Lab%20Assignment/Experiment-1-Login/README.md)
-
-### Assignment 2 - Session-Based To-Do List
-
-A To-Do application that stores user tasks using **Express Sessions**.
-
-[View Assignment 2](./Lab%20Assignment/Experiment-2-Todo/README.md)
-
-### [View All Lab Assignments](./Lab%20Assignment/README.md)
-
----
-
-# PBL Project
-
-## Eisenhower Todo - DevOps Pipeline
-
-An Eisenhower Matrix based task management application used to implement a complete containerization, automated testing, and CI/CD workflow.
-
-### Application Stack
-
-- Node.js
-- Express.js
-- EJS
-- MongoDB
-- HTML & CSS
-
-### DevOps Implementation
-
-- Docker
-- Docker Compose
-- MongoDB Container
-- Persistent Docker Volume
-- Python Automated Testing
-- GitHub Actions
-- Docker Hub
-- GitHub Repository Secrets
-
-### Application Features
-
-Tasks are automatically categorized according to urgency and importance into four Eisenhower Matrix quadrants:
-
-1. DO - Urgent + Important
-2. SCHEDULE - Not Urgent + Important
-3. DELEGATE - Urgent + Not Important
-4. ELIMINATE - Not Urgent + Not Important
-
-### Automated Testing
-
-The `automationTesting.py` script automatically verifies:
-
-- `GET /` - Home page
-- `GET /tasks/new` - Add task page
-- `POST /tasks` - Create task
-- Empty title validation
-- `POST /tasks/:id/delete` - Delete task
-
-Final automated testing result:
-
-```text
-Passed: 5
-Failed: 0
-```
-
-### CI/CD Pipeline
-
-The GitHub Actions workflow automatically performs:
-
-```text
-Code Push
-   |
-   v
-GitHub Actions
-   |
-   v
-Docker Compose
-   |
-   v
-Start Express + MongoDB
-   |
-   v
-Automated Python Testing
-   |
-   v
-All Tests Pass
-   |
-   v
-Build Docker Image
-   |
-   v
-Push Image to Docker Hub
-```
-
-The Docker image is built and published only after all automated tests pass successfully.
-
-[View PBL Project](https://github.com/kanakmehta/eisenhower-todo-devops)
-
----
-
-# Lab Test / Viva
-
-## My Notes
-
-A full-stack Notes Management application developed using:
-
-- Node.js
-- Express.js
-- EJS
-- PostgreSQL
-- HTML & CSS
-
-The application supports:
-
-- Creating notes
-- Categorizing notes
-- Viewing saved notes
-- Deleting notes
-- Persistent PostgreSQL storage
-
-[View Lab Test / Viva Project](./Lab_Test%28Viva%29/my-notes/README.md)
-
-
----
-
-# Technologies & Tools
-
-Throughout this repository, I have worked with:
-
-### Frontend
-
-- HTML5
-- CSS3
+- HTML5 and CSS3
 - JavaScript
-- DOM Manipulation
-- LocalStorage
-- JSON
-
-### Backend
-
 - Node.js
 - Express.js
+- EJS
 - Python
 - Flask
 - FastAPI
-
-### Server-Side Rendering
-
-- EJS
-- Jinja2
-
-### Databases
-
-- PostgreSQL
-- MongoDB
-- MongoDB Atlas
-- SQLite
-
-### Database Technologies
-
-- Mongoose
-- SQLAlchemy ORM
-- PostgreSQL JSONB
-
-### API & Validation
-
-- REST APIs
 - Pydantic
-- JSON
-- HTTP Methods
-- HTTP Status Codes
+- SQLAlchemy
+- SQLite
+- Django
+- MongoDB and Mongoose
+- Docker and Docker Compose
 
-### State Management
+## Purpose
 
-- Cookies
-- Express Sessions
-- LocalStorage
-
-### DevOps & Containerization
-
-- Docker
-- Docker Compose
-- Docker Hub
-- GitHub Actions
-- CI/CD
-- Automated Testing
-- GitHub Secrets
-
-### Development Tools
-
-- Git
-- GitHub
-- VS Code
-- GitHub Pages
-- Docker Desktop
-- MongoDB Compass
-
----
-
-# GitHub Pages
-
-The repository documentation and supported static projects can be made available through GitHub Pages.
-
-Backend applications using Node.js, Express.js, Flask, FastAPI, PostgreSQL, or MongoDB require a running backend server and therefore cannot run directly through GitHub Pages.
-
----
-
-# Quick Navigation
-
-| Section | Open |
-|---|---|
-| **Lab Experiments** | [View Labs](./lab/README.md) |
-| **Theory** | [View Theory](./Theory/README.md) |
-| **Theory Assignments** | [View Theory Assignments](./Theory%20Assignment/README.md) |
-| **Lab Assignments** | [View Lab Assignments](./Lab%20Assignment/README.md) |
-| **Lab Test / Viva** | [View Lab Test](./Lab_Test%28Viva%29/my-notes/README.md) |
-| **PBL Project** | [View PBL](https://github.com/kanakmehta/eisenhower-todo-devops) |
-
----
-
-# Repository Purpose
-
-This repository serves as an organized record of my **Backend Development coursework at UPES**.
-
-It demonstrates my practical understanding of backend concepts ranging from basic HTTP servers and REST APIs to sessions, server-side rendering, database connectivity, ORM, data validation, PostgreSQL, MongoDB, JSONB, containerization, automated testing, and CI/CD workflows.
-
-The repository also demonstrates practical experience with modern development workflows using Docker, Docker Compose, GitHub Actions, and Docker Hub.
-
----
-
-## Developed & Maintained By
-
-**Kanak Mehta**  
-**SAP ID:** 590014943  
-**Batch:** 4  
-**Course:** Backend Development  
-**University:** UPES
-
----
-
-> Learning Backend Development through practical implementation, from basic web servers to APIs, databases, ORM, validation, sessions, containerization, automated testing, and CI/CD.
+The repository documents practical learning across backend development concepts, from server-side routing and APIs to database integration, ORM, validation, middleware, and containerization. Each major section now includes documentation and direct navigation to the corresponding source code.
